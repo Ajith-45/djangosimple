@@ -15,7 +15,7 @@ import os
 import django_heroku
 
 
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 from pathlib import Path
 
@@ -34,7 +34,7 @@ SECRET_KEY = 'q!h3*9z8gk*hz-u#s_8acffom8j!m2w2c4-ug-$798e)dkj30#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['djangoform1.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['simpleform1.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -131,7 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 
